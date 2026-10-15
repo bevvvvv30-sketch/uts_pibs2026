@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<header>
+    <div class="avatar">
+        <img src="foto diri.jpeg" alt="Foto Profil">
+    </div>
+
+    <div class="header-text">
+        <h1>Profil Mahasiswa</h1>
+        <p>Website Profil Pribadi</p>
+    </div>
+</header>
+
+
+    <div class="layout">
+
+       
+<nav>
+    <h3>Menu Profil</h3>
+
+    <button id="btn-biodata" class="active"
+        onclick="tampil('biodata', this)">Biodata</button>
+
+    <button id="btn-pendidikan"
+        onclick="tampil('pendidikan', this)">Pendidikan</button>
+
+    <button id="btn-pengalaman"
+        onclick="tampil('pengalaman', this)">Pengalaman</button>
+
+    <button id="btn-keahlian"
+        onclick="tampil('keahlian', this)">Keahlian</button>
+
+    <button id="btn-publikasi"
+        onclick="tampil('publikasi', this)">Publikasi</button>
+</nav>
+
+
+        <main>
+            <section id="biodata" style="display: block;">
+                <h2>Biodata</h2>
+                <p><b>Nama:</b> Benedictus Bevan Damara</p>
+                <p><b>Panggilan:</b> Bevan</p>
+                <p><b>Program Studi:</b> Sistem Informasi</p>
+                <p><b>Universitas:</b> Universitas Pembangunan Jaya</p>
+                <p><b>Minat:</b> Teknologi dan pengolahan data</p>
+            </section>
+
+            <section id="pendidikan" style="display: none;">
+                <h2>Pendidikan</h2>
+                <h3>Universitas Pembangunan Jaya</h3>
+                <p>Program Studi: Sistem Informasi</p>
+                <p>Status: Mahasiswa aktif</p>
+                <p>Mempelajari teknologi informasi dan proses bisnis.</p>
+            </section>
+
+            <section id="pengalaman" style="display: none;">
+                <h2>Pengalaman</h2>
+                <h3>Organisasi Mahasiswa</h3>
+                <p>Berpartisipasi dalam kegiatan organisasi kampus.</p>
+                <p>Membantu merencanakan dan menjalankan program kerja.</p>
+
+                <h3>Proyek Perkuliahan</h3>
+                <p>Mengerjakan proyek website dan basis data.</p>
+            </section>
+
+            <section id="keahlian" style="display: none;">
+                <h2>Keahlian</h2>
+                <ul>
+                    <li>HTML dasar</li>
+                    <li>CSS dasar</li>
+                    <li>Python dasar</li>
+                    <li>SQL dasar</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </section>
+
+            <section id="publikasi" style="display: none;">
+                <h2>Publikasi dan Proyek</h2>
+                <h3>Website Profil Pribadi</h3>
+                <p>Membuat website menggunakan HTML dan CSS.</p>
+
+                <h3>Proyek Sistem Informasi</h3>
+                <p>Mempelajari pembuatan aplikasi dan pengolahan data.</p>
+            </section>
+        </main>
+
+        <div class="aside-container">
+
+            <aside id="aside-biodata" style="display: block;">
+                <h3>Informasi Pribadi</h3>
+                <p><b>Panggilan:</b> Bevan</p>
+                <p><b>Hobi:</b> Menonton film</p>
+                <p><b>Minat:</b> Teknologi</p>
+            </aside>
+
+            <aside id="aside-pendidikan" style="display: none;">
+                <h3>Informasi Pendidikan</h3>
+                <p><b>Fokus:</b> Sistem Informasi</p>
+                <p><b>Materi:</b> Basis data dan pemrograman</p>
+                <p><b>Tujuan:</b> Mengembangkan kemampuan teknologi</p>
+            </aside>
+
+            <aside id="aside-pengalaman" style="display: none;">
+                <h3>Informasi Pengalaman</h3>
+                <p><b>Bidang:</b> Organisasi mahasiswa</p>
+                <p><b>Kegiatan:</b> Perencanaan acara</p>
+                <p><b>Pengembangan:</b> Kerja sama tim</p>
+            </aside>
+
+            <aside id="aside-keahlian" style="display: none;">
+                <h3>Informasi Keahlian</h3>
+                <p><b>Web:</b> HTML dan CSS</p>
+                <p><b>Bahasa:</b> Python</p>
+                <p><b>Database:</b> SQL</p>
+            </aside>
+
+            <aside id="aside-publikasi" style="display: none;">
+                <h3>Informasi Proyek</h3>
+                <p><b>Jenis:</b> Website profil</p>
+                <p><b>Teknologi:</b> HTML dan CSS</p>
+                <p><b>Tujuan:</b> Media informasi pribadi</p>
+            </aside>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Email: bevvvvv30@gmail.com</p>
+        <p>© Copyright 2026. All Rights Reserved</p>
+        <p>Website Profile Pribadi</p>
+    </footer>
+
+    <script>
+    function tampil(menu, tombol) {
+
+        document.getElementById("biodata").style.display = "none";
+        document.getElementById("pendidikan").style.display = "none";
+        document.getElementById("pengalaman").style.display = "none";
+        document.getElementById("keahlian").style.display = "none";
+        document.getElementById("publikasi").style.display = "none";
+
+        document.getElementById("aside-biodata").style.display = "none";
+        document.getElementById("aside-pendidikan").style.display = "none";
+        document.getElementById("aside-pengalaman").style.display = "none";
+        document.getElementById("aside-keahlian").style.display = "none";
+        document.getElementById("aside-publikasi").style.display = "none";
+
+        
+        document.getElementById(menu).style.display = "block";
+        document.getElementById("aside-" + menu).style.display = "block";
+
+
+        document.getElementById("btn-biodata").className = "";
+        document.getElementById("btn-pendidikan").className = "";
+        document.getElementById("btn-pengalaman").className = "";
+        document.getElementById("btn-keahlian").className = "";
+        document.getElementById("btn-publikasi").className = "";
+
+        tombol.className = "active";
+    }
+</script>
+
+    </script>
+
+</body>
+</html>
